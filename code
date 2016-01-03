@@ -1,0 +1,507 @@
+local defaultField
+
+local function textListener( event )
+end
+
+-- Create text field
+defaultField = native.newTextField( 160, 150, 300, 30 )
+
+defaultField:addEventListener( "userInput", textListener )
+
+------------------------------------------------------------------------------------------------------
+
+local defaultField2
+
+local function textListener2 (event2)
+end
+
+-- Create text field
+defaultField2 = native.newTextField( 160, 300, 300, 30 )
+
+defaultField2:addEventListener( "userInput2", textListener2 )
+
+----------------------------------------------------------------------------------------------------
+
+local encrypt = require( "widget" )
+
+local eTable = {}
+local oTable = {}
+
+-- Function to handle button events
+local function handleButtonEvent1( event )
+
+    if ( "ended" == event.phase ) then
+        print( "Encrypted text is: " )
+
+        for i = 1, string.len(defaultField.text) do        
+            table.insert(eTable, i, string.sub(defaultField.text, i, i))
+
+            if (string.sub(defaultField.text, i, i) == " ") then
+                table.insert(oTable, i, "?")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "a") then
+                table.insert(oTable, i, "z")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "b") then
+                table.insert(oTable, i, "y")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "c") then
+                table.insert(oTable, i, "x")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "d") then
+                table.insert(oTable, i, "w")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "e") then
+                table.insert(oTable, i, "v")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "f") then
+                table.insert(oTable, i, "u")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "g") then
+                table.insert(oTable, i, "t")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "h") then
+                table.insert(oTable, i, "s")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "i") then
+                table.insert(oTable, i, "r")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "j") then
+                table.insert(oTable, i, "q")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "k") then
+                table.insert(oTable, i, "p")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "l") then
+                table.insert(oTable, i, "o")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "m") then
+                table.insert(oTable, i, "n")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "n") then
+                table.insert(oTable, i, "m")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "o") then
+                table.insert(oTable, i, "l")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "p") then
+                table.insert(oTable, i, "k")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "q") then
+                table.insert(oTable, i, "j")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "r") then
+                table.insert(oTable, i, "i")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "s") then
+                table.insert(oTable, i, "h")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "t") then
+                table.insert(oTable, i, "g")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "u") then
+                table.insert(oTable, i, "f")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "v") then
+                table.insert(oTable, i, "e")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "w") then
+                table.insert(oTable, i, "d")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "x") then
+                table.insert(oTable, i, "c")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "y") then
+                table.insert(oTable, i, "b")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "z") then
+                table.insert(oTable, i, "a")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "A") then
+                table.insert(oTable, i, "z")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "B") then
+                table.insert(oTable, i, "y")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "C") then
+                table.insert(oTable, i, "x")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "D") then
+                table.insert(oTable, i, "w")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "E") then
+                table.insert(oTable, i, "v")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "F") then
+                table.insert(oTable, i, "u")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "G") then
+                table.insert(oTable, i, "t")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "H") then
+                table.insert(oTable, i, "s")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "I") then
+                table.insert(oTable, i, "r")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "J") then
+                table.insert(oTable, i, "q")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "K") then
+                table.insert(oTable, i, "p")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "L") then
+                table.insert(oTable, i, "o")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "M") then
+                table.insert(oTable, i, "n")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "N") then
+                table.insert(oTable, i, "m")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "O") then
+                table.insert(oTable, i, "l")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "P") then
+                table.insert(oTable, i, "k")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "Q") then
+                table.insert(oTable, i, "j")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "R") then
+                table.insert(oTable, i, "i")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "S") then
+                table.insert(oTable, i, "h")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "T") then
+                table.insert(oTable, i, "g")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "U") then
+                table.insert(oTable, i, "f")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "V") then
+                table.insert(oTable, i, "e")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "W") then
+                table.insert(oTable, i, "d")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "X") then
+                table.insert(oTable, i, "c")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "Y") then
+                table.insert(oTable, i, "b")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "Z") then
+                table.insert(oTable, i, "a")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "0") then
+                table.insert(oTable, i, "(")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "1") then
+                table.insert(oTable, i, "*")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "2") then
+                table.insert(oTable, i, "&")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "3") then
+                table.insert(oTable, i, "^")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "4") then
+                table.insert(oTable, i, "%")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "5") then
+                table.insert(oTable, i, "$")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "6") then
+                table.insert(oTable, i, "#")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "7") then
+                table.insert(oTable, i, "@")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "8") then
+                table.insert(oTable, i, "!")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "9") then
+                table.insert(oTable, i, ")")
+            end
+        end
+        print(table.concat(oTable))
+        defaultField2.text = table.concat(oTable)
+    end
+end
+
+-- Create the widget
+local button1 = encrypt.newButton
+{
+    left = 0,
+    top = 200,
+    id = "button1",
+    label = "Encrypt",
+    onEvent = handleButtonEvent1
+}
+
+-----------------------------------------------------------------------------------------------------
+
+local decrypt = require( "widget" )
+
+-- Function to handle button events
+local function handleButtonEvent2( event )
+
+    if ( "ended" == event.phase ) then
+        print( "Decrypted text is: " )
+
+        for i = 1, string.len(defaultField.text) do        
+            table.insert(eTable, i, string.sub(defaultField.text, i, i))
+
+            if (string.sub(defaultField.text, i, i) == "z") then
+                table.insert(oTable, i, "a")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "y") then
+                table.insert(oTable, i, "b")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "x") then
+                table.insert(oTable, i, "c")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "w") then
+                table.insert(oTable, i, "d")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "v") then
+                table.insert(oTable, i, "e")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "u") then
+                table.insert(oTable, i, "f")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "t") then
+                table.insert(oTable, i, "g")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "s") then
+                table.insert(oTable, i, "h")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "r") then
+                table.insert(oTable, i, "i")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "q") then
+                table.insert(oTable, i, "j")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "p") then
+                table.insert(oTable, i, "k")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "o") then
+                table.insert(oTable, i, "l")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "n") then
+                table.insert(oTable, i, "m")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "m") then
+                table.insert(oTable, i, "n")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "l") then
+                table.insert(oTable, i, "o")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "k") then
+                table.insert(oTable, i, "p")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "j") then
+                table.insert(oTable, i, "q")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "i") then
+                table.insert(oTable, i, "r")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "h") then
+                table.insert(oTable, i, "s")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "g") then
+                table.insert(oTable, i, "t")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "f") then
+                table.insert(oTable, i, "u")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "e") then
+                table.insert(oTable, i, "v")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "d") then
+                table.insert(oTable, i, "w")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "c") then
+                table.insert(oTable, i, "x")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "b") then
+                table.insert(oTable, i, "y")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "a") then
+                table.insert(oTable, i, "z")
+            end
+
+            if (string.sub(defaultField.text, i, i) == "(") then
+                table.insert(oTable, i, "0")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "*") then
+                table.insert(oTable, i, "1")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "&") then
+                table.insert(oTable, i, "2")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "^") then
+                table.insert(oTable, i, "3")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "%") then
+                table.insert(oTable, i, "4")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "$") then
+                table.insert(oTable, i, "5")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "#") then
+                table.insert(oTable, i, "6")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "@") then
+                table.insert(oTable, i, "7")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "!") then
+                table.insert(oTable, i, "8")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == ")") then
+                table.insert(oTable, i, "9")
+            end
+            
+            if (string.sub(defaultField.text, i, i) == "?") then
+                table.insert(oTable, i, " ")
+            end
+        end
+        print(table.concat(oTable))
+        defaultField2.text = table.concat(oTable)
+    end
+end
+
+-- Create the widget
+local button2 = decrypt.newButton
+{
+    left = 120,
+    top = 200,
+    id = "button2",
+    label = "Decrypt",
+    onEvent = handleButtonEvent2
+}
+
+-----------------------------------------------------------------------------------------------------
+local clear = require( "widget" )
+
+-- Function to handle button events
+local function handleButtonEvent3( event )
+
+    if ( "ended" == event.phase ) then
+        for i = 1, string.len(defaultField.text) do
+            table.remove(oTable)
+            table.remove(eTable)
+            defaultField2.text = table.concat(oTable)
+            defaultField.text = table.concat(oTable)
+        end
+    end
+end
+
+-- Create the widget
+local button1 = clear.newButton
+{
+    left = 60,
+    top = 350,
+    id = "button3",
+    label = "Clear",
+    onEvent = handleButtonEvent3
+}
+
